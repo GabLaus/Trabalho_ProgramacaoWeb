@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecânica Crispim</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+    }
+
+    header {
+        background-color: #000000;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2em;
+        display: flex;
+    }
+
+    .service {
+        padding: 1em;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    p {
+        color: #666;
+    }
+
+    .inicio {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .texto {
+        font-size: 40px;
+        position: relative;
+        margin-top: 5%;
+        font-family: fantasy;
+        margin-left: 1%;
+    }
+
+    .divisoria {
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        margin: 20px 0;
+    }
+
+    .imagem {
+        width: 50%;
+    }
+
+    .botoes {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .botoes:hover {
+        transform: scale(1.1);
+    }
+
+    .barraContato {
+        background-color: #d3d3d3;
+        padding: 3%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .itemContato {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .itemContato img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .itemContato a {
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Mecânica Crispim</h1>
+    </header>
+
+    <div class="inicio">
+        <img src="imagens/logo mecanica.jpg" style="width: 20%;" />
+
+        <span class="texto">A melhor mecânica de Itajaí</span>
+    </div>
+
+    <div class="divisoria"></div>
+
+    <span class="texto">Com qual serviço você gostaria de marcar?</span>
+
+    <div class="container">
+        <div class="service" id="marcarConsulta">
+            <button class="botoes">
+                <img src="https://cdn-icons-png.flaticon.com/512/709/709496.png" class="imagem" />
+            </button>
+            <h2 style="text-align: center;">Marcar consulta</h2>
+        </div>
+
+        <div class="service" id="sobre">
+            <button class="botoes">
+                <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="imagem" />
+            </button>
+            <h2 style="text-align: center;">Sobre a mecânica</h2>
+        </div>
+
+        <div class="service" id="sobreProprietario">
+            <button class="botoes">
+                <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" class="imagem" />
+            </button>
+            <h2 style="text-align: center;">Sobre o proprietário</h2>
+            </p>
+        </div>
+    </div>
+
+    <h1 style="text-align: center; font-size: 50px;">Dúvidas fale conosco</h1>
+
+    <div class="barraContato">
+        <div class="itemContato">
+            <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Telefone">
+            <div>
+                <a href="tel:+5547987654321">+55 (47) 98765-4321</a><br>
+                <a href="tel:+5547912345678">+55 (47) 91234-5678</a>
+            </div>
+        </div>
+        <div class="itemContato">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+            <div>
+                <a href="mailto:mecanicachad@superemail.com">mecanicachad@superemail.com</a>
+                <br>
+                <a href="mailto:mecanicalegal@megaemail.com">mecanicalegal@megaemail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="inicio">
+        <img src="imagens/logo mecanica.jpg" style="width: 20%;" />
+
+        <span style="font-size: 20px; position: relative; margin-top: 5%; margin-left: 1%;">Termos de Serviço Privacidade Cookies © 2024 Mecânica Crispim, MEI</span>
+    </div>
+
+    <script>
+        document.getElementById('marcarConsulta').addEventListener('click', function () {
+            window.location.href = 'escolherServico.html';
+        });
+
+        document.getElementById('sobre').addEventListener('click', function () {
+            window.location.href = 'sobre.html';
+        });
+
+        document.getElementById('sobreProprietario').addEventListener('click', function () {
+            window.location.href = 'sobreProprietario.html';
+        });
+    </script>
+</body>
+
+</html>

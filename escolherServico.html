@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecânica Crispim</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+    }
+
+    header {
+        background-color: #000000;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    .texto {
+        padding-top: 9%;
+        padding-right: 13%;
+        font-size: 80px;
+    }
+
+    input {
+        width: 24%;
+        padding: 1%;
+        border-radius: 13px;
+    }
+
+    button {
+        padding: 2%;
+        border-radius: 13px;
+        background-color: cornflowerblue;
+        color: #FFFFFF;
+        border: 1px solid cornflowerblue;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+        transition: 1s;
+        transform: scale(1.1);
+        background-color: #33539c;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Serviço</h1>
+    </header>
+
+    <h1 style="text-align: center; padding-top: 4%;">Qual seria o serviço</h1>
+
+    <div style="text-align: center;">
+        <input placeholder="Digite aqui o seu caso"/>
+    </div>
+
+    <div style="text-align: center; padding-top: 3%;">
+        <button id="fazerReserva">
+            Avançar
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('fazerReserva').addEventListener('click', function () {
+            window.location.href = 'fazerReserva.html';
+        });
+    </script>
+</body>
+</html>
