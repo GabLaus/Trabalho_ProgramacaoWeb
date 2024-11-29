@@ -184,14 +184,17 @@
     </div>
 
     <div style="text-align: center; padding-top: 3%;">
-        <button id="fazerReserva">
+        <button id="marcarConserto">
             Avançar
         </button>
     </div>
 
     <script>
-        document.getElementById('marcarConsulta').addEventListener('click', function () {
-            window.location.href = 'fazerReserva.html';
+        const params = new URLSearchParams(window.location.search);
+        const servico = params.get('servico');
+
+        document.getElementById('marcarConserto').addEventListener('click', function () {
+            window.location.href = 'marcarConserto.html';
         });
     </script>
 </body>

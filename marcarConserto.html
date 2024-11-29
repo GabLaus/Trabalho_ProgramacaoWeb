@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecânica Crispim</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+    }
+
+    header {
+        background-color: #000000;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    input {
+        width: 24%;
+        padding: 1%;
+        border-radius: 13px;
+    }
+
+    button {
+        padding: 2%;
+        border-radius: 13px;
+        background-color: cornflowerblue;
+        color: #FFFFFF;
+        border: 1px solid cornflowerblue;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+        transition: 1s;
+        transform: scale(1.1);
+        background-color: #33539c;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Marcar Conserto</h1>
+    </header>
+
+    <h1 style="padding-left: 10%; padding-top: 4%;">Seu nome</h1>
+    <div style="padding-left: 10%;">
+        <input id="edtNome" placeholder="Digite seu nome" />
+    </div>
+
+    <div style="display: flex;">
+        <h1 style="padding-left: 10%;">Seu CPF</h1>
+        <h1 style="padding-left: 12%;">Seu RG</h1>
+    </div>
+
+    <div style="display: flex;">
+        <div style="padding-left: 10%;">
+            <input id="edtCpf" placeholder="Digite seu CPF" style="padding: 12%; width: 124%;">
+        </div>
+
+        <div style="padding-left: 10%;">
+            <input id="edtRg" placeholder="Digite seu RG" style="padding: 12%; width: 124%;">
+        </div>
+    </div>
+
+    <div>
+        <h1 style="padding-left: 10%;">Horário</h1>
+        <div style="padding-left: 10%;">
+            <input id="edtHorario" type="time" style="padding: 1%; width: 20%; border-radius: 13px;">
+        </div>
+    </div>
+
+    <div style="text-align: center; padding-top: 3%;">
+        <button id="fazerReserva">
+            Avançar
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('fazerReserva').addEventListener('click', function () {
+            const nome = document.getElementById('edtNome').value.trim();
+            const cpf = document.getElementById('edtCpf').value.trim();
+            const rg = document.getElementById('edtRg').value.trim();
+            const horario = document.getElementById('edtHorario').value.trim();
+
+            // Verificação dos campos
+            if (!nome) {
+                alert('Por favor, preencha o campo Nome.');
+                document.getElementById('edtNome').focus();
+                return;
+            }
+
+            if (!cpf) {
+                alert('Por favor, preencha o campo CPF.');
+                document.getElementById('edtCpf').focus();
+                return;
+            }
+
+            if (!rg) {
+                alert('Por favor, preencha o campo RG.');
+                document.getElementById('edtRg').focus();
+                return;
+            }
+
+            if (!horario) {
+                alert('Por favor, selecione um horário.');
+                document.getElementById('edtHorario').focus();
+                return;
+            }
+
+            // Se todos os campos forem preenchidos, avança
+            alert('Todos os campos foram preenchidos! Sua reserva foi concluida!');
+        });
+    </script>
+</body>
+
+</html>

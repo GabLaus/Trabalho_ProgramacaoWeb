@@ -61,7 +61,7 @@
     <h1 style="text-align: center; padding-top: 4%;">Qual seria o serviço</h1>
 
     <div style="text-align: center;">
-        <input placeholder="Digite aqui o seu caso"/>
+        <input id="servicoInput" placeholder="Digite aqui o seu caso"/>
     </div>
 
     <div style="text-align: center; padding-top: 3%;">
@@ -72,7 +72,16 @@
 
     <script>
         document.getElementById('fazerReserva').addEventListener('click', function () {
-            window.location.href = 'fazerReserva.html';
+            const servicoInput = document.getElementById('servicoInput');
+            const servico = servicoInput.value.trim();
+
+            if (servico === "") {
+                alert('Por favor, preencha o campo antes de continuar.');
+                servicoInput.focus();
+                return;
+            }
+
+            window.location.href = `fazerReserva.html?servico=${encodeURIComponent(servico)}`;
         });
     </script>
 </body>
